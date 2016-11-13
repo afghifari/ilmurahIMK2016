@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ilmurah</title>
+	<link rel="shortcut icon" href="img/icon.jpg" />
+	
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/tabel.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a href="index.html"  onclick = $("#menu-close").click(); ><img src="img/logo.png" style="width:75%; height:75%"></a>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Add Beasiswa</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >Search Beasiswa</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Profileku</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Beasiswaku</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h3>Seleksi Mahasiswa</h3>
+    <hr width="20px" />
+    <table class="table table-bordered" border="1">
+        <thead class="mbhead" bgcolor="lightblue">
+            <tr class="mbrow">
+                <th>Nama</th>
+                <th>Link Profil</th>
+                <th>IPK</th>
+                <th>SKS</th>
+                <th>Angkatan</th>
+                <th>Link lampiran</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Albert Einstein</td>
+                <td>/einstein</td>
+                <td>4.0</td>
+                <td>25</td>
+                <td>2013</td>
+                <td><a href="129.zip">/file/129</a></td>
+            </tr>
+            <tr>
+                <td>Nikola Tesla</td>
+                <td>/tesla</td>
+                <td>3.95</td>
+                <td>24</td>
+                <td>2014</td>
+                <td><a href="108.zip">/file/108</a></td>
+            </tr>
+            <tr>
+                <td>Stephen Hawking</td>
+                <td>/shawking</td>
+                <td>3.9</td>
+                <td>24</td>
+                <td>2014</td>
+                <td><a href="100.zip">/file/100</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>          
+        </tbody>
+    </table>
+
+    <script src="js/jquery.js"></script>
+   <script type="text/javascript">
+        $("table.table tr td").bind("click", dataClick);
+        function dataClick(e) {
+            console.log(e);
+            if(e.currentTarget.contentEditable != null){
+                $(e.currentTarget).attr("contentEditable",true);
+            }
+            else{
+                $(e.currentTarget).append("<input type='text'>");
+            }    
+        }
+   </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
