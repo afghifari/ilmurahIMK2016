@@ -11,7 +11,7 @@
 
     <title>Ilmurah</title>
 	<link rel="shortcut icon" href="img/icon.jpg" />
-
+	
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,7 +32,6 @@
 </head>
 
 <body>
-
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -47,59 +46,40 @@
                 <a href="advancedsearch.html" onclick = $("#menu-close").click(); >Search Beasiswa</a>
             </li>
             <li>
-                <a href="add_beasiswa.html" onclick = $("#menu-close").click(); >Add Beasiswa</a>
-            </li>
-            <li>
-                <a href="my_profile.html" onclick = $("#menu-close").click(); >Profileku</a>
-            </li>
-            <li>
-                <a href="my_beasiswa.html" onclick = $("#menu-close").click(); >Beasiswaku</a>
-            </li>
-            <li>
-                <a href="login.html" onclick = $("#menu-close").click(); >Logout</a>
+                <a href="login.html" onclick = $("#menu-close").click(); >Login</a>
             </li>
         </ul>
     </nav>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="row">
-                      <div class="col-md-10 col-md-offset-2">
-                        <h2>Didi Sumardi</h2>
-                      </div>
-                    </div>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <img src="img/logo.png">
+            <center>
+             <div class="container">
 
-                    <div class="row">
-                      <div class="col-md-2">
-                        <img src="img/profile.jpg" class="img-circle img-responsive" alt="" />
-                      </div>
-                      <div class="col-md-10">
-
-                        <h3>NIM</h3>
-                        <p>10016002</p>
-
-                        <h3>Alamat Lengkap</h3>
-                        <p>Jalan Terama 35 03/04 Bandung</p>
-
-                        <h3>Alamat Profil Eksternal</h3>
-                        <p>https://www.linkedin.com/in/didi.s</p>
-
-                        <p>
-                          <a href="edit_my_profile.html" class="btn btn-default">Ubah</a>
-                        </p>
-
-                      </div>
-                    </div>
-                </div>
+              <table class="table-hover">
+                <tbody>
+                  <tr>
+                    <td style="padding-right: 20px;">Email</td>
+                    <td style="padding-right: 20px;">:</td>
+                    <td><input type="text" class="form-control" style=" height: 35px; border:none;"></td>
+                  </tr>
+                  <tr>
+                    <td style="padding-right: 20px;">Password</td>
+                    <td style="padding-right: 20px;">:</td>
+                    <td><input type="Password" class="form-control" style="height: 35px; border:none;"></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <!-- /.row -->
+            </center>
+            <br>
+            <a href="my_beasiswa.html" class="btn btn-dark btn-lg">Log In!</a>
         </div>
-        <!-- /.container -->
-    </section>
-
+       
+    </header>
+    
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
