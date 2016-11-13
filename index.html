@@ -34,22 +34,26 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <a href="index.html"  onclick = $("#menu-close").click(); ><img src="img/logo.png" style="width:75%; height:75%"></a>
+            <br/><br/>
+            <input type="text" style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
+            <br/>
+            <a href="search_result.html" class="btn btn-light" align="middle" style="position: relative; left: 40%; top:10%">GO</a>
+            <li>
+                <a href="advancedsearch.html" onclick = $("#menu-close").click(); >Search Beasiswa</a>
+            </li>
             <li>
                 <a href="add_beasiswa.html" onclick = $("#menu-close").click(); >Add Beasiswa</a>
             </li>
             <li>
-                <a href="#about" onclick = $("#menu-close").click(); >Search Beasiswa</a>
+                <a href="my_profile.html" onclick = $("#menu-close").click(); >Profileku</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Profileku</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Beasiswaku</a>
+                <a href="my_beasiswa.html" onclick = $("#menu-close").click(); >Beasiswaku</a>
             </li>
         </ul>
     </nav>
