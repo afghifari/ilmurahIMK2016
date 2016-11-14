@@ -18,6 +18,8 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
+    <link href="css/style.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -40,44 +42,28 @@
             <a href="notification.html" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-bell"></i></a>
             <a href="index.html"  onclick = $("#menu-close").click(); ><img src="img/logo.png" style="width:75%; height:75%"></a>
             <br/><br/>
-            <input type="text" class="form-control"  style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
+            <input type="text" style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
             <br/>
             <a href="search_result.html" class="btn btn-light" align="middle" style="position: relative; left: 40%; top:10%">GO</a>
             <li>
                 <a href="advancedsearch.html" onclick = $("#menu-close").click(); >Search Beasiswa</a>
             </li>
             <li>
-                <a href="login.html" onclick = $("#menu-close").click(); >Login</a>
+                <a href="add_beasiswa.html" onclick = $("#menu-close").click(); >Add Beasiswa</a>
+            </li>
+            <li>
+                <a href="my_profile.html" onclick = $("#menu-close").click(); >Profileku</a>
+            </li>
+            <li>
+                <a href="my_beasiswa.html" onclick = $("#menu-close").click(); >Beasiswaku</a>
+            </li>
+            <li>
+                <a href="login.html" onclick = $("#menu-close").click(); >Logout</a> 
             </li>
         </ul>
     </nav>
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <img src="img/logo.png">
-            <br>
-            <center> <input type="text" class="form-control" style="width:80%; height: 35px; border:none;"></center>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-        </div>
-    </header>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Platform pencarian beasiswa terpusat</h2>
-                    <p class="lead">Mengapa? </br>
-                    <br>
-                    Karena pencarian beasiswa secara konvensional terlalu bertele-tele, pemohon beasiswa harus aktif melakukan pencarian, baik melalui medial sosial maupun search engine. Begitu pula bagi penyelenggara beasiswa, harus mengiklankan beasiswanya agar beasiswa tersebut tepat sasaran. Dengan adanya ilmurah, pencarian beasiswa akan menjadi lebih mudah, cepat, dan juga tepat sesuai keinginan kedua belah pihak.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+   
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -85,62 +71,22 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Overview</h2>
+                    <h2>Form Permohonan Beasiswa</h2>
                     <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-power-off fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Platform terpusat</strong>
-                                </h4>
-                                <p>Pencarian beasiswa semudah menekan tombol.</p>
-                                <a href="#P5" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-phone fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Komunikasi antar pihak</strong>
-                                </h4>
-                                <p>Komunikasi antar kedua pihak lebih mudah.</p>
-                                <a href="#comm" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Semuanya untuk beasiswa</strong>
-                                </h4>
-                                <p>Platform ini hanya untuk pencarian beasiswa.</p>
-                                <a href="#explore" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Keamanan</strong>
-                                </h4>
-                                <p>Keamanan pada platform ini sangat terjamin.</p>
-                                <a href="#tni" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 align="left">Informasi Pemohon</h3>
+                    <h4 align="left">Nama Lengkap</h4>
+                    <input type="text" style="width:100%; height: 35px; position:absolute; left:1.5%; border:none;"><br/><br/>
+                    <h4 align="left">NIM</h4>
+                    <input type="text" style="width:100%; height: 35px; position:absolute; left:1.5%; border:none;"><br/><br/>
+                    <h4 align="left">Prestasi yang pernah diraih :</h4>
+                    <input type="text" style="width:100%; height: 70px; position:absolute; left:1.5%; border:none;"><br/><br/><br/><br/>
+                    <h4 align="left">Alasan ingin mendaftar beasiswa</h4>
+                    <input type="text" style="width:100%; height: 70px; position:absolute; left:1.5%; border:none;"><br/><br/><br/><br/>
+
+                    
+                    <br/><br/>
+                    <a href="berhasil.html" class="btn btn-light" style="position: absolute; left:1.5%;">Daftar</a>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->

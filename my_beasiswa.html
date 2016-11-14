@@ -18,6 +18,8 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="css/tabel.css">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -37,10 +39,10 @@
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a href="notification.html" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-bell"></i></a>
             <a href="index.html"  onclick = $("#menu-close").click(); ><img src="img/logo.png" style="width:75%; height:75%"></a>
             <br/><br/>
-            <input type="text" style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
+            <input type="text" class="form-control"  style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
             <br/>
             <a href="search_result.html" class="btn btn-light" align="middle" style="position: relative; left: 40%; top:10%">GO</a>
             <li>
@@ -55,6 +57,9 @@
             <li>
                 <a href="my_beasiswa.html" onclick = $("#menu-close").click(); >Beasiswaku</a>
             </li>
+            <li>
+                <a href="login.html" onclick = $("#menu-close").click(); >Logout</a>
+            </li>
         </ul>
     </nav>
 
@@ -62,95 +67,100 @@
     <section id="about" class="about">
         <div class="container">
             <div class="row">
+                
                 <div class="col-lg-12 text-center">
-                    <h2>Ini kalau mau background putih</h2>
-                    <p class="lead">Mengapa? </br>
-                    <br>
-                    Karena pencarian beasiswa secara konvensional terlalu bertele-tele, pemohon beasiswa harus aktif melakukan pencarian, baik melalui medial sosial maupun search engine. Begitu pula bagi penyelenggara beasiswa, harus mengiklankan beasiswanya agar beasiswa tersebut tepat sasaran. Dengan adanya ilmurah, pencarian beasiswa akan menjadi lebih mudah, cepat, dan juga tepat sesuai keinginan kedua belah pihak.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Ini kalau mau background biru</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-power-off fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Platform terpusat</strong>
-                                </h4>
-                                <p>Pencarian beasiswa semudah menekan tombol.</p>
-                                <a href="#P5" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-phone fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Komunikasi antar pihak</strong>
-                                </h4>
-                                <p>Komunikasi antar kedua pihak lebih mudah.</p>
-                                <a href="#comm" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Semuanya untuk beasiswa</strong>
-                                </h4>
-                                <p>Platform ini hanya untuk pencarian beasiswa.</p>
-                                <a href="#explore" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Keamanan</strong>
-                                </h4>
-                                <p>Keamanan pada platform ini sangat terjamin.</p>
-                                <a href="#tni" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
+                    <h3>Seleksi Mahasiswa</h3>
+                    <hr/>
+                    <div align="left">
+                        <h5>Metode pengurutan</h5>
+                        <input type="text"/>
+                        <button type="submit">urutkan</button>
                     </div>
-                    <!-- /.row (nested) -->
+                    <hr width="2px" />
+                    <table class="table table-bordered" border="1">
+                        <thead class="mbhead" bgcolor="lightblue">
+                            <tr class="mbrow">
+                                <th>Nama</th>
+                                <th>Link Profil</th>
+                                <th>IPK</th>
+                                <th>SKS</th>
+                                <th>Angkatan</th>
+                                <th>Link lampiran</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Albert Einstein</td>
+                                <td>/einstein</td>
+                                <td>4.0</td>
+                                <td>25</td>
+                                <td>2013</td>
+                                <td><a href="129.zip">/file/129</a></td>
+                            </tr>
+                            <tr class="spaceUnder">
+                                <td>Nikola Tesla</td>
+                                <td>/tesla</td>
+                                <td>3.95</td>
+                                <td>24</td>
+                                <td>2014</td>
+                                <td><a href="108.zip">/file/108</a></td>
+                            </tr>
+                            <tr>
+                                <td>Stephen Hawking</td>
+                                <td>/shawking</td>
+                                <td>3.9</td>
+                                <td>24</td>
+                                <td>2014</td>
+                                <td><a href="100.zip">/file/100</a></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>          
+                        </tbody>
+                    </table>
                 </div>
-                <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
-
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1 text-outline: 2px 2px #ff0000>Ini kalau mau background image</h1>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-        </div>
-    </header>
     
     <!-- Footer -->
     <footer id="contact">
@@ -161,9 +171,9 @@
                     <br/><br/>
                     <p>Sources:</p>
                     <ul class="list-unstyled">
-                        <li><a href="https://fivedots.coe.psu.ac.th/~ad/jg2/ch14/p5Glove.pdf"><p>https://fivedots.coe.psu.ac.th/~ad/jg2/ch14/p5Glove.pdf</p></a>
+                        <li><a href="http://www.dreamersroadmap.com/"><p>DREAMer’s Roadmap</p></a>
                         </li>
-                        <li><a href="http://www.jatit.org/volumes/Vol33No2/1Vol33No2.pdf"><p>http://www.jatit.org/volumes/Vol33No2/1Vol33No2.pdf</p></a>
+                        <li><a href="http://www.usatoday.com/story/tech/personal/2013/08/09/app-for-finding-college-scholarships/2636505/"><p>Scholly</p></a>
                         </li>
                     </ul>
                     <br>

@@ -11,12 +11,14 @@
 
     <title>Ilmurah</title>
 	<link rel="shortcut icon" href="img/icon.jpg" />
-
+	
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -37,10 +39,10 @@
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a href="notification.html" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-bell"></i></a>
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <a href="index.html"  onclick = $("#menu-close").click(); ><img src="img/logo.png" style="width:75%; height:75%"></a>
             <br/><br/>
-            <input type="text" class="form-control"  style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
+            <input type="text" style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
             <br/>
             <a href="search_result.html" class="btn btn-light" align="middle" style="position: relative; left: 40%; top:10%">GO</a>
             <li>
@@ -56,62 +58,38 @@
                 <a href="my_beasiswa.html" onclick = $("#menu-close").click(); >Beasiswaku</a>
             </li>
             <li>
-                <a href="login.html" onclick = $("#menu-close").click(); >Logout</a>
+                <a href="login.html" onclick = $("#menu-close").click(); >Logout</a> 
             </li>
         </ul>
     </nav>
 
-    <!-- About -->
-    <section id="about" class="about">
+   
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Pencarian Detil</h2>
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
 
+                    <a href="http://the-mni.com/wp-content/uploads/2015/12/Sukses-Jadi-Pengusaha.jpg">
+                        <img src="img/berhasil.jpg" style="width:50%; height:65%" alt="berhasil">
+                    </a>
 
-                    <form class="" action="index.html" method="post">
-                        <div class="form-group">
-                            <label for="" class="control-label">Judul Beasiswa</label>
-                            <input type="text" class="form-control" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="control-label">Nama Penyelenggara Beasiswa</label>
-                            <input type="text" class="form-control" value="">
-                        </div>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            S1
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            S2
-                          </label>
-                        </div>
-                        <div class="radio disabled">
-                          <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                            S3
-                          </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="control-label">IPK Minimal</label>
-                            <input type="text" class="form-control" value="">
-                        </div>
-                        <a href="search_result.html" class="btn btn-primary">Cari</a>
-                    </form>
-
-
-
+                    <h2>Selamat Anda Telah Berhasil Mendaftar Beasiswa</h2>
+                   
+                    <br/>
+                    <a href="my_profile.html" class="btn btn-light" style="position: absolute; left:44%;">Back to Home</a>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <!-- /.row (nested) -->
                 </div>
+                <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
-
+    
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -121,9 +99,9 @@
                     <br/><br/>
                     <p>Sources:</p>
                     <ul class="list-unstyled">
-                        <li><a href="http://www.dreamersroadmap.com/"><p>DREAMer’s Roadmap</p></a>
+                        <li><a href="https://fivedots.coe.psu.ac.th/~ad/jg2/ch14/p5Glove.pdf"><p>https://fivedots.coe.psu.ac.th/~ad/jg2/ch14/p5Glove.pdf</p></a>
                         </li>
-                        <li><a href="http://www.usatoday.com/story/tech/personal/2013/08/09/app-for-finding-college-scholarships/2636505/"><p>Scholly</p></a>
+                        <li><a href="http://www.jatit.org/volumes/Vol33No2/1Vol33No2.pdf"><p>http://www.jatit.org/volumes/Vol33No2/1Vol33No2.pdf</p></a>
                         </li>
                     </ul>
                     <br>
