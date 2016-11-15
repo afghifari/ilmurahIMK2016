@@ -58,10 +58,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3 id="nama">Monitor Mahasiswa - Albert Einstein</h3>
+                    <h3 id="nama" style="display: none;">Monitor Mahasiswa - Albert Einstein</h3>
                     <hr/>
 				    <hr width="2px" />
-				    <table id="tabel" class="table table-bordered" border="1">
+				    <table id="tabel" class="table table-bordered" border="1" style="display: none;">
 				        <thead class="mbhead" bgcolor="lightblue">
 				            <tr class="mbrow">
 				            	<th width="20px"></th>
@@ -126,7 +126,7 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
-        <ul id="nav-user" class="nav nav-pills">
+        <ul id="nav-user" class="nav nav-pills" style="display: none;">
 		  <li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
 		  <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
 		  <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>
@@ -136,6 +136,11 @@
 
     <script src="js/jquery.js"></script>
    <script type="text/javascript">
+   		$(document).ready(function(){
+            $("#nama").slideDown();
+            $("#tabel").slideDown();
+            $("#nav-user").slideDown();
+        });
         $("table.table tr td").bind("click", dataClick);
         function dataClick(e) {
             console.log(e);
@@ -148,26 +153,40 @@
         }
 
         function albert(){
+            $("#nama").css({"display":"none"});
+        	$("#tabel").css({"display":"none"});
+            $("#nav-user").css({"display":"none"});
         	$("#nama").html("Monitor Mahasiswa - Albert Einstein");
         	$("#nav-user").html(`<li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
 		  <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
 		  <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
-        	$("#tabel").css({"display":"none"});
+        	$("#nama").slideDown();
         	$("#tabel").slideDown();
+            $("#nav-user").slideDown();
         }
         function nikola(){
+            $("#nama").css({"display":"none"});
+            $("#tabel").css({"display":"none"});
+            $("#nav-user").css({"display":"none"});
         	$("#nama").html("Monitor Mahasiswa - Nikola Tesla");
         	$("#nav-user").html(`<li onclick="albert()"><a href="#">Albert Einstein</a></li>
 		  <li class="active" onclick="nikola()"><a href="#">Nikola Tesla</a></li>
 		  <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
-        	$("#tabel").slideDown();
+        	$("#nama").slideDown();
+            $("#tabel").slideDown();
+            $("#nav-user").slideDown();
         }
         function hawking(){
+            $("#nama").css({"display":"none"});
+            $("#tabel").css({"display":"none"});
+            $("#nav-user").css({"display":"none"});
         	$("#nama").html("Monitor Mahasiswa - Stephen Hawking");
         	$("#nav-user").html(`<li onclick="albert()"><a href="#">Albert Einstein</a></li>
 		  <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
 		  <li class="active" onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
-        	$("#tabel").slideDown();
+        	$("#nama").slideDown();
+            $("#tabel").slideDown();
+            $("#nav-user").slideDown();
         }
    </script>
 

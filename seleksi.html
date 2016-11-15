@@ -3,6 +3,18 @@
 
 <head>
 
+	<style>
+    	button {
+		    background-color: lightblue; /* Green */
+		    border: none;
+		    color: white;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		}
+    </style>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +70,7 @@
     </nav>
     
     <!-- About -->
-    <section id="about" class="about">
+    <section id="about" class="about" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -67,18 +79,18 @@
                     <div align="left">
 	                    <h5>Metode pengurutan</h5>
 	                    <input type="text"/>
-	                    <button type="submit">urutkan</button>
+	                    <button>urutkan</button>
 	                </div>
 				    <hr width="2px" />
-				    <table class="table table-bordered" border="1">
+				    <table id="keywords" class="table table-bordered" border="1">
 				        <thead class="mbhead" bgcolor="lightblue">
 				            <tr class="mbrow">
-				                <th>Nama</th>
-				                <th>Link Profil</th>
-				                <th>IPK</th>
-				                <th>SKS</th>
-				                <th>Angkatan</th>
-				                <th>Link lampiran</th>
+				                <th><span>Nama</span></th>
+				                <th><span>Link Profil</span></th>
+				                <th><span>IPK</span></th>
+				                <th><span>SKS</span></th>
+				                <th><span>Angkatan</span></th>
+				                <th><span>Link lampiran</span></th>
 				            </tr>
 				        </thead>
 				        <tbody>
@@ -105,47 +117,7 @@
 				                <td>24</td>
 				                <td>2014</td>
 				                <td><a href="100.zip">/file/100</a></td>
-				            </tr>
-				            <tr>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>          
+				            </tr>        
 				        </tbody>
 				    </table>
                 </div>
@@ -154,10 +126,54 @@
         </div>
         <!-- /.container -->
     </section>
+    <!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="close">&times</span>
+	      <h2>Tips</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Klik nama kolom untuk melakukan pengurutan berdasar kolom tersebut</p>
+	    </div>
+	  </div>
+
+	</div>
     
 
     <script src="js/jquery.js"></script>
    <script type="text/javascript">
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal
+		$(document).ready(function(){
+			$("#about").slideDown();
+			modal.style.display = "block";
+		});
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+
+   		$(function(){
+		  $('#keywords').tablesorter(); 
+		});
         $("table.table tr td").bind("click", dataClick);
         function dataClick(e) {
             console.log(e);
@@ -168,6 +184,38 @@
                 $(e.currentTarget).append("<input type='text'>");
             }    
         }
+        function sortTable(table, col, reverse) {
+		    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+		        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+		        i;
+		    reverse = -((+reverse) || -1);
+		    tr = tr.sort(function (a, b) { // sort rows
+		        return reverse // `-1 *` if want opposite order
+		            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+		                .localeCompare(b.cells[col].textContent.trim())
+		               );
+		    });
+		    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+		}
+
+		function makeSortable(table) {
+		    var th = table.tHead, i;
+		    th && (th = th.rows[0]) && (th = th.cells);
+		    if (th) i = th.length;
+		    else return; // if no `<thead>` then do nothing
+		    while (--i >= 0) (function (i) {
+		        var dir = 1;
+		        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+		    }(i));
+		}
+
+		function makeAllSortable(parent) {
+		    parent = parent || document.body;
+		    var t = parent.getElementsByTagName('table'), i = t.length;
+		    while (--i >= 0) makeSortable(t[i]);
+		}
+
+		window.onload = function () {makeAllSortable();};
    </script>
 
     <!-- Bootstrap Core JavaScript -->
