@@ -11,7 +11,7 @@
 
     <title>Ilmurah</title>
 	<link rel="shortcut icon" href="img/icon.jpg" />
-	
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -58,12 +58,12 @@
                 <a href="my_beasiswa.html" onclick = $("#menu-close").click(); >Beasiswaku</a>
             </li>
             <li>
-                <a href="login.html" onclick = $("#menu-close").click(); >Logout</a> 
+                <a href="login.html" onclick = $("#menu-close").click(); >Logout</a>
             </li>
         </ul>
     </nav>
 
-   
+
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -74,16 +74,24 @@
                     <h2>Form Permohonan Beasiswa</h2>
                     <hr class="small">
                     <h3 align="left">Informasi Pemohon</h3>
-                    <h4 align="left">Nama Lengkap</h4>
-                    <input type="text" style="width:100%; height: 35px; position:absolute; left:1.5%; border:none;"><br/><br/>
-                    <h4 align="left">NIM</h4>
-                    <input type="text" style="width:100%; height: 35px; position:absolute; left:1.5%; border:none;"><br/><br/>
-                    <h4 align="left">Prestasi yang pernah diraih :</h4>
-                    <input type="text" style="width:100%; height: 70px; position:absolute; left:1.5%; border:none;"><br/><br/><br/><br/>
-                    <h4 align="left">Alasan ingin mendaftar beasiswa</h4>
-                    <input type="text" style="width:100%; height: 70px; position:absolute; left:1.5%; border:none;"><br/><br/><br/><br/>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4 align="left">NIM</h4>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-9">
+                            <h4 align="left">Nama Lengkap</h4>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
 
-                    
+
+                    <h4 align="left">Prestasi yang pernah diraih :</h4>
+                    <textarea type="text" class="form-control" rows="6"></textarea>
+                    <h4 align="left">Alasan ingin mendaftar beasiswa</h4>
+                    <textarea type="text" class="form-control" rows="6"></textarea>
+
+
                     <br/><br/>
                     <a href="berhasil.html" class="btn btn-light" style="position: absolute; left:1.5%;">Daftar</a>
                     <br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -95,7 +103,7 @@
         </div>
         <!-- /.container -->
     </section>
-    
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
