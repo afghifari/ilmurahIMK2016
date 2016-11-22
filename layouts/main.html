@@ -15,8 +15,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,49 +31,62 @@
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a href="notification.html" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-bell"></i></a>
-            <a href="index.html"  onclick = $("#menu-close").click(); ><img src="img/logo.png" style="width:75%; height:75%"></a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <ul class="nav nav-stacked nav-pills">
+            <a href="index.html"><img src="img/logo.png" class="img-responsive"></a>
             <br/><br/>
-            <input type="text" class="form-control"  style="width:100%;height:35px;border:none;" placeholder="Search beasiswa...">
-            <br/>
-            <a href="search_result.html" class="btn btn-light" align="middle" style="position: relative; left: 40%; top:10%">GO</a>
             <li>
-                <a href="advancedsearch.html" onclick = $("#menu-close").click(); >Search Beasiswa</a>
-            </li>
-            <li>
-                <a href="login.html" onclick = $("#menu-close").click(); >Login</a>
-            </li>
-        </ul>
-    </nav>
-
-    {{ contents | safe }}
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Stopdown Startup</strong></h4>
-                    <br/><br/>
-                    <p>Sources:</p>
-                    <ul class="list-unstyled">
-                        <li><a href="http://www.dreamersroadmap.com/"><p>DREAMer’s Roadmap</p></a>
-                        </li>
-                        <li><a href="http://www.usatoday.com/story/tech/personal/2013/08/09/app-for-finding-college-scholarships/2636505/"><p>Scholly</p></a>
-                        </li>
-                    </ul>
-                    <br>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Ilmurah 2016</p>
+                <div class="sidebar-searchbar">
+                    <div class="sidebar-searchbar-form">
+                        <input type="text" class="form-control" placeholder="Search beasiswa...">
+                    </div>
+                    <div class="sidebar-searchbar-button">
+                        <a href="search_result.html" class="btn btn-light">GO</a>
+                    </div>
                 </div>
-            </div>
+            </li>
+
+            <br/>
+
+            <li>
+              <a href="advancedsearch.html" >Search Beasiswa</a>
+            </li>
+            <li>
+              <a href="login.html" >Login</a>
+            </li>
+          </ul>
         </div>
-    </footer>
+
+        <div class="col-md-9 content-container">
+          {{ contents | safe }}
+
+          <!-- Footer -->
+          <footer id="contact" class="ilmurah-footer">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-lg-10 col-lg-offset-1 text-center">
+                          <h4><strong>Stopdown Startup</strong></h4>
+                          <br/><br/>
+                          <p>Sources:</p>
+                          <ul class="list-unstyled">
+                              <li><a href="http://www.dreamersroadmap.com/"><p>DREAMer’s Roadmap</p></a>
+                              </li>
+                              <li><a href="http://www.usatoday.com/story/tech/personal/2013/08/09/app-for-finding-college-scholarships/2636505/"><p>Scholly</p></a>
+                              </li>
+                          </ul>
+                          <br>
+                          <hr class="small">
+                          <p class="text-muted">Copyright &copy; Ilmurah 2016</p>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+        </div>
+
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

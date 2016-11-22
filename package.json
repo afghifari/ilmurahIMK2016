@@ -2,7 +2,7 @@
   "name": "static-site-example",
   "private": true,
   "scripts": {
-    "start": "nodemon --ignore build/ -e html index.js",
+    "start": "nodemon --ignore build/ -e html,css index.js",
     "build": "node index.js"
   },
   "dependencies": {
