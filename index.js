@@ -13,7 +13,7 @@ Metalsmith(__dirname)
   .destination('./build')
   .clean(false)
   .use(layouts({
-    engine: 'handlebars'
+    engine: 'nunjucks'
   }))
   .build(function(err, files) {
     if (err) { throw err; }
