@@ -1,5 +1,5 @@
 ---
-layout: main.html
+layout: pemberi.njk
 ---
 
     <!-- About -->
@@ -9,83 +9,70 @@ layout: main.html
                 <div class="col-lg-12 text-center">
                     <h3 id="nama" style="display: none;">Monitor Mahasiswa - Albert Einstein</h3>
                     <hr/>
-				    <hr width="2px" />
-				    <table id="tabel" class="table table-bordered" border="1" style="display: none;">
-				        <thead class="mbhead" bgcolor="lightblue">
-				            <tr class="mbrow">
-				            	<th width="20px"></th>
-				                <th>2014</th>
-				                <th>2015</th>
-				                <th>2016</th>
-				            </tr>
-				        </thead>
-				        <tbody>
-				            <tr>
-				            	<th>IPK</th>
-				                <td>4.0</td>
-				                <td>4.0</td>
-				                <td>4.0</td>
-				            </tr>
-				            <tr>
-				                <th>Laporan</th>
-				                <td>/file/200</td>
-				                <td>/file/230</td>
-				                <td>/file/250</td>
-				            </tr>
-				            <tr>
-				                <th></th>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <th></th>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <th></th>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <th></th>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <th></th>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				            <tr>
-				                <th></th>
-				                <td></td>
-				                <td></td>
-				                <td></td>
-				            </tr>
-				        </tbody>
-				    </table>
+                    <table id="tabel" class="table table-bordered" border="1" style="display: none;">
+                        <thead class="" bgcolor="lightblue">
+                            <tr class="">
+                              <th></th>
+                              <th style="width: 200px; text-align: center;">2014</th>
+                              <th style="width: 200px; text-align: center;">2015</th>
+                              <th style="width: 200px; text-align: center;">2016</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <th>IPK</th>
+                                <td>4.0</td>
+                                <td>4.0</td>
+                                <td>4.0</td>
+                            </tr>
+                            <tr>
+                                <th>Laporan</th>
+                                <td><a href="#">/file/200</a></td>
+                                <td><a href="#">/file/230</a></td>
+                                <td><a href="#">/file/250</a></td>
+                            </tr>
+                            <tr>
+                                <th>Aktivitas Kemahasiswaan</th>
+                                <td>Ketua Unit</td>
+                                <td>Calon Ketua Himpunan</td>
+                                <td>Arkavidia</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
         <ul id="nav-user" class="nav nav-pills" style="display: none;">
-		  <li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
-		  <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
-		  <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>
-		</ul>
+      <li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
+      <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
+      <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>
+    </ul>
     </section>
 
 
     <script src="js/jquery.js"></script>
    <script type="text/javascript">
-   		$(document).ready(function(){
+       $(document).ready(function(){
             $("#nama").slideDown();
             $("#tabel").slideDown();
             $("#nav-user").slideDown();
@@ -103,25 +90,25 @@ layout: main.html
 
         function albert(){
             $("#nama").css({"display":"none"});
-        	$("#tabel").css({"display":"none"});
+          $("#tabel").css({"display":"none"});
             $("#nav-user").css({"display":"none"});
-        	$("#nama").html("Monitor Mahasiswa - Albert Einstein");
-        	$("#nav-user").html(`<li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
-		  <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
-		  <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
-        	$("#nama").slideDown();
-        	$("#tabel").slideDown();
+          $("#nama").html("Monitor Mahasiswa - Albert Einstein");
+          $("#nav-user").html(`<li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
+      <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
+      <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
+          $("#nama").slideDown();
+          $("#tabel").slideDown();
             $("#nav-user").slideDown();
         }
         function nikola(){
             $("#nama").css({"display":"none"});
             $("#tabel").css({"display":"none"});
             $("#nav-user").css({"display":"none"});
-        	$("#nama").html("Monitor Mahasiswa - Nikola Tesla");
-        	$("#nav-user").html(`<li onclick="albert()"><a href="#">Albert Einstein</a></li>
-		  <li class="active" onclick="nikola()"><a href="#">Nikola Tesla</a></li>
-		  <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
-        	$("#nama").slideDown();
+          $("#nama").html("Monitor Mahasiswa - Nikola Tesla");
+          $("#nav-user").html(`<li onclick="albert()"><a href="#">Albert Einstein</a></li>
+      <li class="active" onclick="nikola()"><a href="#">Nikola Tesla</a></li>
+      <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
+          $("#nama").slideDown();
             $("#tabel").slideDown();
             $("#nav-user").slideDown();
         }
@@ -129,11 +116,11 @@ layout: main.html
             $("#nama").css({"display":"none"});
             $("#tabel").css({"display":"none"});
             $("#nav-user").css({"display":"none"});
-        	$("#nama").html("Monitor Mahasiswa - Stephen Hawking");
-        	$("#nav-user").html(`<li onclick="albert()"><a href="#">Albert Einstein</a></li>
-		  <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
-		  <li class="active" onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
-        	$("#nama").slideDown();
+          $("#nama").html("Monitor Mahasiswa - Stephen Hawking");
+          $("#nav-user").html(`<li onclick="albert()"><a href="#">Albert Einstein</a></li>
+      <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
+      <li class="active" onclick="hawking()"><a href="#">Stephen Hawking</a></li>`);
+          $("#nama").slideDown();
             $("#tabel").slideDown();
             $("#nav-user").slideDown();
         }

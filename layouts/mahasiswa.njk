@@ -1,0 +1,24 @@
+{% extends "layouts/main.njk" %}
+
+{% block sidebar %}
+<li>
+    <div class="sidebar-searchbar">
+        <div class="sidebar-searchbar-form">
+            <input type="text" class="form-control" placeholder="Search beasiswa...">
+        </div>
+        <div class="sidebar-searchbar-button">
+            <a href="search_result.html" class="btn btn-light">GO</a>
+        </div>
+    </div>
+</li>
+
+<br/>
+
+<li>
+  <a href="advancedsearch.html" >Pencarian Beasiswa Detil</a>
+</li>
+
+<li><a href="my_profile.html">Profil</a></li>
+
+<li><a href="index.html">Logout</a></li>
+{% endblock %}

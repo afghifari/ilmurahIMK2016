@@ -4,7 +4,7 @@ body {
 
 .content-container {
   background-color: #fff;
-  min-height: calc(100vh - 2rem);
+  min-height: 100vh;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
