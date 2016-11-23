@@ -39,69 +39,48 @@
             <br/><br/>
             
 <li>
-    <div class="sidebar-searchbar">
-        <div class="sidebar-searchbar-form">
-            <input type="text" class="form-control" placeholder="Search beasiswa...">
-        </div>
-        <div class="sidebar-searchbar-button">
-            <a href="search_result.html" class="btn btn-light">GO</a>
-        </div>
-    </div>
+  <a href="login.html" >Login</a>
 </li>
-
-<br/>
-
-<li>
-  <a href="advancedsearch.html" >Pencarian Beasiswa Detil</a>
-</li>
-
-<li><a href="my_profile.html">Profil</a></li>
-
-<li><a href="index.html">Logout</a></li>
 
           </ul>
         </div>
 
         <div class="col-md-9 content-container">
           
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container-fluid meta-originally-container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Form Permohonan Beasiswa</h2>
-                    <hr class="small">
-                    <h3 align="left">Informasi Pemohon</h3>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h4 align="left">NIM</h4>
-                            <input type="text" class="form-control" value="10016002" readonly>
-                        </div>
-                        <div class="col-md-9">
-                            <h4 align="left">Nama Lengkap</h4>
-                            <input type="text" class="form-control" value="Didi Sumardi" readonly>
-                        </div>
-                    </div>
-
-
-                    <h4 align="left">Prestasi yang pernah diraih :</h4>
-                    <textarea type="text" class="form-control" rows="3"></textarea>
-                    <h4 align="left">Alasan ingin mendaftar beasiswa</h4>
-                    <textarea type="text" class="form-control" rows="3"></textarea>
-
-
-                    <br/>
-                    <a href="berhasil.html" class="btn btn-default">Daftar</a>
-                    <br>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-center">
+            <img src="img/logo.png">
         </div>
-        <!-- /.container -->
-    </section>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="text-center">Login Penyelenggara Beasiswa</h1>
+        <div class="col-md-6 col-md-offset-3">
+          <form class="form-horizontal" action="pemberi.html" method="get">
+            <span class="help-block"></span>
+            <div class="form-group">
+              <label class="col-sm-4 control-label" for="">Email</label>
+              <div class="col-sm-8">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label" for="">Password</label>
+              <div class="col-sm-8">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-8 col-sm-offset-4">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
 
           <!-- Footer -->
