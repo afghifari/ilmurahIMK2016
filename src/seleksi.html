@@ -3,7 +3,7 @@ layout: pemberi.njk
 ---
 
     <!-- About -->
-    <section id="about" class="about" style="display: none;">
+    <section id="about" class="about">
         <div class="container-fluid meta-originally-container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -62,76 +62,9 @@ layout: pemberi.njk
     <!-- The Modal -->
 
     <script src="js/jquery.js"></script>
-   <script type="text/javascript">
-		// // Get the modal
-		// var modal = document.getElementById('myModal');
-    //
-		// // Get the button that opens the modal
-		// var btn = document.getElementById("myBtn");
-    //
-		// // Get the <span> element that closes the modal
-		// var span = document.getElementsByClassName("close")[0];
-    //
-		// // When the user clicks the button, open the modal
-		// $(document).ready(function(){
-		// 	$("#about").slideDown();
-		// 	modal.style.display = "block";
-		// });
-		// // When the user clicks on <span> (x), close the modal
-		// span.onclick = function() {
-		//     modal.style.display = "none";
-		// }
-    //
-		// // When the user clicks anywhere outside of the modal, close it
-		// window.onclick = function(event) {
-		//     if (event.target == modal) {
-		//         modal.style.display = "none";
-		//     }
-		// }
+    <script src="js/tablesort.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      new Tablesort(document.getElementById('keywords'))
 
-   		$(function(){
-		  $('#keywords').tablesorter();
-		});
-        $("table.table tr td").bind("click", dataClick);
-        function dataClick(e) {
-            console.log(e);
-            if(e.currentTarget.contentEditable != null){
-                $(e.currentTarget).attr("contentEditable",true);
-            }
-            else{
-                $(e.currentTarget).append("<input type='text'>");
-            }
-        }
-        function sortTable(table, col, reverse) {
-		    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
-		        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
-		        i;
-		    reverse = -((+reverse) || -1);
-		    tr = tr.sort(function (a, b) { // sort rows
-		        return reverse // `-1 *` if want opposite order
-		            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
-		                .localeCompare(b.cells[col].textContent.trim())
-		               );
-		    });
-		    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
-		}
-
-		function makeSortable(table) {
-		    var th = table.tHead, i;
-		    th && (th = th.rows[0]) && (th = th.cells);
-		    if (th) i = th.length;
-		    else return; // if no `<thead>` then do nothing
-		    while (--i >= 0) (function (i) {
-		        var dir = 1;
-		        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
-		    }(i));
-		}
-
-		function makeAllSortable(parent) {
-		    parent = parent || document.body;
-		    var t = parent.getElementsByTagName('table'), i = t.length;
-		    while (--i >= 0) makeSortable(t[i]);
-		}
-
-		window.onload = function () {makeAllSortable();};
+    </script>
    </script>
