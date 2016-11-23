@@ -24,3 +24,8 @@ footer.ilmurah-footer {
 .sidebar-searchbar-button {
   flex-grow: 0;
 }
+
+.services {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
