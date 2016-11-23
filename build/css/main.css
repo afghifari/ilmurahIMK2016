@@ -1,0 +1,31 @@
+body {
+  background-color: hsl(207, 76%, 86%) !important;
+}
+
+.content-container {
+  background-color: #fff;
+  min-height: 100vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+footer.ilmurah-footer {
+  margin-top: 5rem;
+}
+
+.sidebar-searchbar {
+  display: flex;
+}
+
+.sidebar-searchbar-form {
+  flex-grow: 1;
+}
+
+.sidebar-searchbar-button {
+  flex-grow: 0;
+}
+
+.services {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
