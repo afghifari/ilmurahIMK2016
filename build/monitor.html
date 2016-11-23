@@ -53,10 +53,18 @@
     <!-- About -->
     <section id="about" class="about">
         <div class="container-fluid meta-originally-container">
+            <h3 id="nama" class="text-center" style="display: none;">Monitor Mahasiswa - Albert Einstein</h3>
+            <hr/>
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 id="nama" style="display: none;">Monitor Mahasiswa - Albert Einstein</h3>
-                    <hr/>
+                <div class="col-lg-3">
+                  <ul id="nav-user" class="nav nav-pills nav-stacked" style="display: none;">
+                    <li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
+                    <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
+                    <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-9">
+
                     <table id="tabel" class="table table-bordered" border="1" style="display: none;">
                         <thead class="" bgcolor="lightblue">
                             <tr class="">
@@ -68,10 +76,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                              <th>IPK</th>
-                                <td>4.0</td>
-                                <td>4.0</td>
-                                <td>4.0</td>
+                                <th>IPK</th>
+                                <td>3.94</td>
+                                <td>3.72</td>
+                                <td>3.61</td>
                             </tr>
                             <tr>
                                 <th>Laporan</th>
@@ -110,11 +118,6 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
-        <ul id="nav-user" class="nav nav-pills" style="display: none;">
-      <li class="active" onclick="albert()"><a href="#">Albert Einstein</a></li>
-      <li onclick="nikola()"><a href="#">Nikola Tesla</a></li>
-      <li onclick="hawking()"><a href="#">Stephen Hawking</a></li>
-    </ul>
     </section>
 
 
