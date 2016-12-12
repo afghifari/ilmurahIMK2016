@@ -73,37 +73,45 @@
 				        <thead class="mbhead" bgcolor="lightblue">
 				            <tr class="mbrow">
 				                <th><span>Nama</span></th>
+				                <th><span>Angkatan</span></th>
+				                <th><span>Jurusan</span></th>
 				                <th><span>Link Profil</span></th>
 				                <th><span>IPK</span></th>
 				                <th><span>SKS</span></th>
-				                <th><span>Angkatan</span></th>
 				                <th><span>Link lampiran</span></th>
+				                <th><span>Status</span></th>
 				            </tr>
 				        </thead>
 				        <tbody>
 				            <tr>
-				                <td>Albert Einstein</td>
+				                <td><a href="my_profile.html">Albert Einstein</a></td>
+				                <td>1940</td>
+				                <td>Fisika</td>
 				                <td>/einstein</td>
 				                <td>4.0</td>
 				                <td>25</td>
-				                <td>2013</td>
 				                <td><a href="129.zip">/file/129</a></td>
+				                <td><a id="1" href="#">Ubah</a><p id="s1">Lolos</p></td>
 				            </tr>
 				            <tr class="spaceUnder">
-				                <td>Nikola Tesla</td>
+				                <td><a href="my_profile.html">Nikola Tesla</a></td>
+				                <td>1970</td>
+				                <td>Teknik Elektro</td>
 				                <td>/tesla</td>
 				                <td>3.95</td>
 				                <td>24</td>
-				                <td>2014</td>
 				                <td><a href="108.zip">/file/108</a></td>
+				                <td><a id="2" href="#">Ubah</a><p id="s2">Lolos</p></td>
 				            </tr>
 				            <tr>
-				                <td>Stephen Hawking</td>
+				                <td><a href="my_profile.html">Stephen Hawking</a></td>
+				                <td>1965</td>
+				                <td>Fisika</td>
 				                <td>/shawking</td>
 				                <td>3.9</td>
 				                <td>24</td>
-				                <td>2014</td>
 				                <td><a href="100.zip">/file/100</a></td>
+				                <td><a id="3" href="#">Ubah</a><p id="s3">Tidak lolos</p></td>
 				            </tr>
 				        </tbody>
 				    </table>
@@ -119,7 +127,18 @@
     <script src="js/tablesort.min.js" charset="utf-8"></script>
     <script type="text/javascript">
       new Tablesort(document.getElementById('keywords'))
-
+      $("#1").click(function(e) {
+            e.preventDefault();
+            $("#s1").html("Tidak lolos");
+        });
+      $("#2").click(function(e) {
+            e.preventDefault();
+            $("#s2").html("Tidak lolos");
+        });
+      $("#3").click(function(e) {
+            e.preventDefault();
+            $("#s3").html("Lolos");
+        });
     </script>
    </script>
 
