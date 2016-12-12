@@ -33,8 +33,34 @@ footer.ilmurah-footer {
 }
 
 .sidebar {
+  overflow-y: auto;
+  right: 0;
   padding-left: 0;
   padding-right: 0;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.toggle {
+  position: absolute;
+  margin: 5px 5px 0 0;
+}
+
+.toggle-close {
+  margin: 5px 5px 0 0;
+}
+
+.sidebar.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .sidebar-logo {

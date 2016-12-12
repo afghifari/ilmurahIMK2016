@@ -31,9 +31,13 @@
 </head>
 
 <body>
+<script type="text/javascript">
+</script>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 sidebar">
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <div class="col-md-3 sidebar" id="sidebar-wrapper">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle-close"><i class="fa fa-times"></i></a>
           <ul class="nav nav-stacked nav-pills">
             <a href="index.html" class="sidebar-logo"><img src="img/logo.png" class="img-responsive"></a>
             <br/><br/>
@@ -152,6 +156,41 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    $("#menu-toggle").hide();
+
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        $("#menu-toggle").show();
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        $("#menu-toggle").hide();
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+  </script>
 
 </body>
 
