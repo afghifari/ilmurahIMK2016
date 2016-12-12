@@ -69,30 +69,47 @@
                 <h4 align="left">Nama penyelenggara beasiswa</h4>
                 <input type="text" class="form-control meta-originally-custom-styling"><br/><br/>
                 <h4 align="left">Deskripsi beasiswa</h4>
-                <textarea rows="3" class="form-control meta-originally-custom-styling"></textarea><br/><br/><br/><br/>
-                <a href="#P5" class="btn btn-light" style="position: absolute; left:1.5%;">Add More</a><br/><br/>
+                <textarea rows="3" class="form-control meta-originally-custom-styling"></textarea><br/><br/>
+                <div id="newfield" align="left">
+                    <h4 align="left">Field baru</h4>
+                    <input type="text" class="form-control meta-originally-custom-styling"><br/><br/>
+                    <a id="menu-close4" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                    <br/><br/><br/>
+                </div>
+                <a id="add-field" href="#" class="btn btn-default" style="position: absolute; left:1.5%;">Add More</a><br/><br/>
+                
                 <h3 align="left">Persyaratan beasiswa</h3>
-                <h4 align="left">IPK</h4>
-                <div align="left">
+                <div id="IPK" align="left">
+                    <h4>IPK</h4>
                     <input type="radio" id="choice1" name="choice" value="0" checked="checked" />
                     <label for="choice1"><span></span>></label>
                     <input type="radio" id="choice2" name="choice" value="1" />
                     <label for="choice2"><span></span>≥</label>
                     <input type="text" class="form-control meta-originally-custom-styling">
-                    <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                    <a id="menu-close1" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                    <br/><br/><br/>
                 </div>
-                <br/>
-                <h4 align="left">SKS</h4>
-                <div align="left">
+                <div id="SKS" align="left">
+                    <h4>SKS</h4>
                     <input type="radio" id="choice3" name="choice1" value="0" checked="checked" />
                     <label for="choice3"><span></span>></label>
                     <input type="radio" id="choice4" name="choice1" value="1" />
                     <label for="choice4"><span></span>≥</label>
                     <input type="text" class="form-control meta-originally-custom-styling">
-                    <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                    <a id="menu-close2" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                    <br/><br/><br/>
                 </div>
-                <br/><br/>
-                <a href="#P5" class="btn btn-light" style="position: absolute; left:1.5%;">Add More</a>
+                <div id="newcriteria" align="left">
+                    <h4>Kriteria tambahan</h4>
+                    <input type="radio" id="choice3" name="choice1" value="0" checked="checked" />
+                    <label for="choice3"><span></span>></label>
+                    <input type="radio" id="choice4" name="choice1" value="1" />
+                    <label for="choice4"><span></span>≥</label>
+                    <input type="text" class="form-control meta-originally-custom-styling">
+                    <a id="menu-close3" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                    <br/><br/><br/>
+                </div>
+                <a id="add-criteria" href="#" class="btn btn-default" style="position: absolute; left:1.5%;">Add More</a>
 
                 <br/><br/><br/>
                 <!-- /.row (nested) -->
@@ -101,7 +118,39 @@
         </div>
         <!-- /.row -->
     </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
     <!-- /.container -->
+    <script type="text/javascript">
+        $("#newcriteria").hide(0);
+        $("#newfield").hide(0);
+        $("#menu-close1").click(function(e) {
+            e.preventDefault();
+            $("#IPK").hide(500);
+        });
+        $("#menu-close2").click(function(e) {
+            e.preventDefault();
+            $("#SKS").hide(500);
+        });
+        $("#menu-close3").click(function(e) {
+            e.preventDefault();
+            $("#newcriteria").hide(500);
+        });
+        $("#menu-close4").click(function(e) {
+            e.preventDefault();
+            $("#newfield").hide(500);
+        });
+        $("#add-criteria").click(function(e) {
+            e.preventDefault();
+            $("#newcriteria").show(500);
+        });
+        $("#add-field").click(function(e) {
+            e.preventDefault();
+            $("#newfield").show(500);
+        });
+    </script>
 </section>
 
           </div>
