@@ -33,9 +33,9 @@
 <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 sidebar">
           <ul class="nav nav-stacked nav-pills">
-            <a href="index.html"><img src="img/logo.png" class="img-responsive"></a>
+            <a href="index.html" class="sidebar-logo"><img src="img/logo.png" class="img-responsive"></a>
             <br/><br/>
             
 <li>
@@ -46,14 +46,40 @@
         </div>
 
         <div class="col-md-9 content-container">
-          
+          <div class="page-content-container">
+            
+    <div class="homepage-search-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <div class="row homepage-search-title">
+              <div class="col-md-6 col-md-offset-3">
+                <img src="img/logo.png" class="img-responsive">
+              </div>
+            </div>
+            <p>
+              <input type="text" class="form-control input-lg" placeholder="Cari Beasiswa">
+            </p>
+            <p>
+              <a href="search_result_nologin.html" class="btn btn-primary">Cari</a>
+              <a href="advancedsearchnologin.html" class="btn btn-default">Pencarian Detil</a>
+            </p>
+            <p>
+              <a href="#platform-description" class="btn btn-info homepage-description-button">Tentang Ilmurah</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- About -->
     <section id="about" class="about">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
+                    <a id="platform-description"></a>
                     <h2>Platform pencarian beasiswa terpusat</h2>
-                    <p class="lead">Mengapa? </br>
+                    <p>Mengapa? </br>
                     <br>
                     Karena pencarian beasiswa secara konvensional terlalu bertele-tele, pemohon beasiswa harus aktif melakukan pencarian, baik melalui medial sosial maupun search engine. Begitu pula bagi penyelenggara beasiswa, harus mengiklankan beasiswanya agar beasiswa tersebut tepat sasaran. Dengan adanya ilmurah, pencarian beasiswa akan menjadi lebih mudah, cepat, dan juga tepat sesuai keinginan kedua belah pihak.</p>
                 </div>
@@ -62,21 +88,6 @@
         </div>
         <!-- /.container -->
     </section>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-          <p>
-            <input type="text" class="form-control input-lg">
-          </p>
-          <p>
-            <a href="search_result_nologin.html" class="btn btn-primary">Cari</a>
-            <a href="advancedsearchnologin.html" class="btn btn-default">Pencarian Detil</a>
-          </p>
-
-        </div>
-      </div>
-    </div>
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -149,6 +160,7 @@
         <!-- /.container -->
     </section>
 
+          </div>
 
           <!-- Footer -->
           <footer id="contact" class="ilmurah-footer">

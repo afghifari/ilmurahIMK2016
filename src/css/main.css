@@ -10,7 +10,9 @@ body {
 }
 
 footer.ilmurah-footer {
-  margin-top: 5rem;
+  border-top: 1px solid hsl(207, 76%, 86%);
+  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .sidebar-searchbar {
@@ -28,4 +30,66 @@ footer.ilmurah-footer {
 .services {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar-logo {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sidebar .nav > li {
+  margin: 1rem 0;
+}
+
+.sidebar .nav > li > a {
+  border-radius: 0;
+  background-color: hsl(207, 76%, 66%);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.5rem;
+  color: hsl(207, 76%, 31%);
+}
+
+.sidebar .nav > li > a:hover {
+  background-color: hsl(207, 76%, 71%);
+}
+
+.homepage-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 20px);
+  background-color: hsl(207, 76%, 96%);
+}
+
+.homepage-search-container .container-fluid {
+  display: block;
+  width: 100%;
+}
+
+.homepage-search-title {
+  margin-bottom: 4rem;
+}
+
+.homepage-description-button {
+  margin-top: 2rem;
+}
+
+.page-content-container {
+  min-height: calc(100vh - 20px);
+}
+
+.sidebar-menu-section-header {
+  padding: 0rem 1.5rem;
+  font-size: 1.5rem;
+  line-height: 21px;
+  margin-top: 30.5px;
+
+  color: hsl(207, 76%, 31%);
 }
