@@ -40,6 +40,7 @@ layout: public.njk
                         <label for="" class="control-label">IPK Minimal</label>
                         <input type="text" class="form-control" value="">
                     </div>
+
                     <a href="search_result_nologin.html" class="btn btn-primary">Cari</a>
                 </form>
 
@@ -50,4 +51,20 @@ layout: public.njk
         <!-- /.row -->
     </div>
     <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- /.container -->
+    <script type="text/javascript">
+        $("#newfield").hide(0);
+        
+        $("#menu-close4").click(function(e) {
+            e.preventDefault();
+            $("#newfield").hide(500);
+        });
+        $("#add-field").click(function(e) {
+            e.preventDefault();
+            $("#newfield").show(500);
+        });
+    </script>
 </section>
