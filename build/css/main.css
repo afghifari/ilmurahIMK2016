@@ -120,3 +120,7 @@ footer.ilmurah-footer {
 
   color: hsl(207, 76%, 31%);
 }
+
+.criteria {
+  vertical-align: middle;
+}
