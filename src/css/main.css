@@ -17,6 +17,7 @@ footer.ilmurah-footer {
 
 .sidebar-searchbar {
   display: flex;
+  padding: 0 1rem;
 }
 
 .sidebar-searchbar-form {
